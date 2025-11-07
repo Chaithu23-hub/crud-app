@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- This includes Spring Boot's default logging settings -->
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <!-- Define a variable for the logging directory -->
+    <property name="LOG_DIR" value="logs" />
+
+    <!--
+      APPENDER 1: For Service Logs
+      Defines a "destination" for service-layer logs.
+    -->
+    <appender name="FILE_SERVICE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_DIR}/service.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+      APPENDER 2: For Controller Logs
+      Defines a "destination" for controller-layer logs.
+    -->
+    <appender name="FILE_CONTROLLER" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_DIR}/controller.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+      APPENDER 3: For All Other Logs (Rolling)
+      This is a rolling appender that handles all other logs.
+      It creates a new file each day or when the file size hits 10MB.
+    -->
+    <appender name="FILE_ALL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/application.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/archived/application-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+      LOGGER 1: Service Logger
+      Tells Spring to send all logs from the 'service' package to the 'FILE_SERVICE' appender.
+      'additivity="false"' is important: it prevents these logs from also going to the 'root' logger.
+    -->
+    <logger name="com.softsuave.crud.service" level="DEBUG" additivity="false">
+        <appender-ref ref="FILE_SERVICE" />
+        <appender-ref ref="CONSOLE" /> <!-- Also send to console -->
+    </logger>
+
+    <!--
+      LOGGER 2: Controller Logger
+      Tells Spring to send all logs from the 'controller' package to the 'FILE_CONTROLLER' appender.
+    -->
+    <logger name="com.softsuave.crud.controller" level="DEBUG" additivity="false">
+        <appender-ref ref="FILE_CONTROLLER" />
+        <appender-ref ref="CONSOLE" /> <!-- Also send to console -->
+    </logger>
+
+    <!--
+      ROOT LOGGER: The "Catch-All"
+      This handles all other logs (like Spring's internal logs) that don't match the specific loggers above.
+    -->
+    <root level="INFO">
+        <appender-ref ref="FILE_ALL" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>

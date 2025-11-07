@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- We'll use Tailwind CSS for quick, modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A little custom style for our message boxes */
+        .message {
+            display: none;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .message.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans min-h-screen flex items-center justify-center p-4">
+
+<div class="w-full max-w-4xl space-y-8">
+    <h1 class="text-4xl font-bold text-center text-blue-400">Student Admin Dashboard</h1>
+
+    <!-- Login Card -->
+    <div class="bg-gray-800 shadow-xl rounded-lg p-8">
+        <h2 class="text-2xl font-semibold mb-6">1. Login</h2>
+        <form id="login-form" class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-400">Username</label>
+                <input type="text" id="username" name="username" required
+                       class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-400">Password</label>
+                <input type="password" id="password" name="password" required
+                       class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200">
+                Login & Get Token
+            </button>
+        </form>
+        <div id="login-message" class="message mt-4 p-4 rounded-md text-sm"></div>
+    </div>
+
+    <!-- Data Card -->
+    <div class="bg-gray-800 shadow-xl rounded-lg p-8">
+        <h2 class="text-2xl font-semibold mb-6">2. Fetch Secured Data</h2>
+        <p class="text-gray-400 mb-4">You must be logged in as an 'ADMIN' to see this. (Tests your `@PreAuthorize` rule!)</p>
+        <button id="get-students-btn"
+                class="w-full bg-gray-600 text-white font-bold py-2 px-4 rounded-md cursor-not-allowed" disabled>
+            Get All Students
+        </button>
+        <div id="data-message" class="message mt-4 p-4 rounded-md text-sm"></div>
+
+        <!-- Results will be displayed here -->
+        <div id="results" class="mt-6 space-y-4">
+            <!-- Student data will be dynamically inserted here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // --- Globals ---
+    let jwtToken = null;
+
+    // --- Element References ---
+    const loginForm = document.getElementById('login-form');
+    const getStudentsBtn = document.getElementById('get-students-btn');
+    const loginMessage = document.getElementById('login-message');
+    const dataMessage = document.getElementById('data-message');
+    const resultsDiv = document.getElementById('results');
+
+    // --- Event Listeners ---
+    loginForm.addEventListener('submit', handleLogin);
+    getStudentsBtn.addEventListener('click', handleGetStudents);
+
+    /**
+     * Handles the login form submission.
+     */
+    async function handleLogin(e) {
+        e.preventDefault();
+        showMessage(loginMessage, 'Logging in...', 'blue');
+        resultsDiv.innerHTML = ''; // Clear old results
+
+        const username = loginForm.username.value;
+        const password = loginForm.password.value;
+
+        try {
+            const response = await fetch('/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (!response.ok) {
+                throw new Error(`Authentication failed! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            jwtToken = data.token; // Store the token
+
+            showMessage(loginMessage, 'Success! You have a token.', 'green');
+            // Enable the "Get Students" button
+            getStudentsBtn.disabled = false;
+            getStudentsBtn.classList.remove('bg-gray-600', 'cursor-not-allowed');
+            getStudentsBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+
+        } catch (error) {
+            console.error('Login Error:', error);
+            jwtToken = null;
+            showMessage(loginMessage, error.message, 'red');
+            // Disable the "Get Students" button
+            getStudentsBtn.disabled = true;
+            getStudentsBtn.classList.add('bg-gray-600', 'cursor-not-allowed');
+            getStudentsBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+        }
+    }
+
+    /**
+     * Handles the "Get Students" button click.
+     */
+    async function handleGetStudents() {
+        if (!jwtToken) {
+            showMessage(dataMessage, 'You must log in first.', 'red');
+            return;
+        }
+
+        showMessage(dataMessage, 'Fetching students...', 'blue');
+        resultsDiv.innerHTML = ''; // Clear old results
+
+        try {
+            const response = await fetch('/students', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${jwtToken}`
+                }
+            });
+
+            if (response.status === 403) {
+                throw new Error('Access Denied (403)! You must have the ADMIN role to see this.');
+            }
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data! Status: ${response.status}`);
+            }
+
+            const students = await response.json();
+            displayStudents(students);
+            hideMessage(dataMessage);
+
+        } catch (error) {
+            console.error('Fetch Students Error:', error);
+            showMessage(dataMessage, error.message, 'red');
+        }
+    }
+
+    /**
+     * Displays the list of students in the resultsDiv.
+     */
+    function displayStudents(students) {
+        if (students.length === 0) {
+            resultsDiv.innerHTML = '<p class="text-gray-400">No students found.</p>';
+            return;
+        }
+
+        // Map each student to an HTML card and join them
+        resultsDiv.innerHTML = students.map(student => `
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-300">${student.name || 'N/A'}</h3>
+                <p class="text-gray-400">ID: ${student.id}</p>
+                <p class="text-gray-400">Branch: ${student.branch || 'N/A'}</p>
+                <p class="text-gray-400">Percentage: ${student.percentage || 'N/A'}%</p>
+            </div>
+        `).join('');
+    }
+
+    /**
+     * Helper function to show a status message.
+     */
+    function showMessage(element, text, color) {
+        element.textContent = text;
+        element.className = 'message p-4 rounded-md text-sm'; // Reset classes
+        element.classList.add(`bg-${color}-800`, `border-${color}-600`, `text-${color}-200`, 'border', 'show');
+    }
+
+    /**
+     * Helper function to hide a status message.
+     */
+     function hideMessage(element) {
+        element.classList.remove('show');
+     }
+
+</script>
+</body>
+</html>

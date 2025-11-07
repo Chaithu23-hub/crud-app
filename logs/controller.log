@@ -1,0 +1,171 @@
+2025-11-03 16:27:07.996 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-03 16:27:07.996 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-03 16:27:08.401 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-03 16:27:08.401 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-03 16:27:08.441 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-03 16:27:35.737 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Login attempt received for username: admin
+2025-11-03 16:27:35.737 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: admin
+2025-11-03 16:27:35.829 [http-nio-8080-exec-3] ERROR c.s.crud.controller.AuthController - Unexpected error during login for 'admin': Bad credentials
+2025-11-03 16:27:56.514 [http-nio-8080-exec-4] INFO  c.s.c.controller.StudentController - GET /students - Request received
+2025-11-03 16:27:56.598 [http-nio-8080-exec-4] INFO  c.s.c.controller.StudentController - GET /students - Returning 2 students
+2025-11-03 16:28:14.912 [http-nio-8080-exec-6] INFO  c.s.c.controller.StudentController - GET /students/1 - Request received
+2025-11-03 16:28:14.920 [http-nio-8080-exec-6] INFO  c.s.c.controller.StudentController - GET /students/1 - Returning student: Chaithravardhan Reddy
+2025-11-03 16:28:19.112 [http-nio-8080-exec-7] INFO  c.s.c.controller.StudentController - GET /students/2 - Request received
+2025-11-03 16:28:19.115 [http-nio-8080-exec-7] INFO  c.s.c.controller.StudentController - GET /students/2 - Returning student: Priya Sharma
+2025-11-03 16:28:21.899 [http-nio-8080-exec-8] INFO  c.s.c.controller.StudentController - GET /students/1 - Request received
+2025-11-03 16:28:21.904 [http-nio-8080-exec-8] INFO  c.s.c.controller.StudentController - GET /students/1 - Returning student: Chaithravardhan Reddy
+2025-11-03 16:32:20.789 [http-nio-8080-exec-6] INFO  c.s.crud.controller.ResumeController - GET /resumes - Request received to fetch all resumes
+2025-11-03 16:32:20.795 [http-nio-8080-exec-6] INFO  c.s.crud.controller.ResumeController - GET /resumes - Returning 2 resumes
+2025-11-03 16:32:35.341 [http-nio-8080-exec-7] INFO  c.s.crud.controller.ResumeController - POST /resumes/1/add - Request to add resume for student ID 1
+2025-11-03 16:37:59.761 [http-nio-8080-exec-3] INFO  c.s.c.controller.StudentController - POST /students - Request to create student: Rahul Verma
+2025-11-03 16:42:09.773 [http-nio-8080-exec-5] INFO  c.s.c.controller.StudentController - POST /students - Request to create student: Rahul Verma
+2025-11-03 16:42:11.378 [http-nio-8080-exec-6] INFO  c.s.c.controller.StudentController - POST /students - Request to create student: Rahul Verma
+2025-11-03 16:42:57.035 [http-nio-8080-exec-2] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Rahul Verma
+2025-11-03 17:10:51.601 [http-nio-8080-exec-5] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Rahul Verma
+2025-11-03 17:11:04.555 [http-nio-8080-exec-6] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Rahul Verma
+2025-11-03 17:13:06.176 [http-nio-8080-exec-1] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Rahul Verma
+2025-11-03 17:14:27.624 [http-nio-8080-exec-2] INFO  c.s.crud.controller.UserController - Received registration request for username: cherry
+2025-11-03 17:14:27.754 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.UserController - Password encoded successfully for username: cherry
+2025-11-03 17:14:27.754 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.UserController - Assigned default role 'ROLE_USER' to user: cherry
+2025-11-03 17:14:27.877 [http-nio-8080-exec-2] INFO  c.s.crud.controller.UserController - User 'cherry' registered successfully!
+2025-11-03 17:14:34.699 [http-nio-8080-exec-3] INFO  c.s.crud.controller.UserController - Received registration request for username: chaithu
+2025-11-03 17:14:34.782 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.UserController - Password encoded successfully for username: chaithu
+2025-11-03 17:14:34.783 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.UserController - Assigned default role 'ROLE_USER' to user: chaithu
+2025-11-03 17:14:34.790 [http-nio-8080-exec-3] INFO  c.s.crud.controller.UserController - User 'chaithu' registered successfully!
+2025-11-03 17:18:20.106 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-03 17:18:20.107 [http-nio-8080-exec-6] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-03 17:18:20.408 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-03 17:18:20.409 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-03 17:18:20.469 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-03 17:18:34.036 [http-nio-8080-exec-7] INFO  c.s.c.controller.StudentController - GET /students - Request received
+2025-11-03 17:18:34.057 [http-nio-8080-exec-7] INFO  c.s.c.controller.StudentController - GET /students - Returning 0 students
+2025-11-03 17:18:38.522 [http-nio-8080-exec-8] INFO  c.s.c.controller.StudentController - GET /students/1 - Request received
+2025-11-03 17:20:01.185 [http-nio-8080-exec-2] INFO  c.s.crud.controller.UserController - Received registration request for username: asik
+2025-11-03 17:20:01.270 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.UserController - Password encoded successfully for username: asik
+2025-11-03 17:20:01.270 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.UserController - Assigned default role 'ROLE_USER' to user: asik
+2025-11-03 17:20:01.276 [http-nio-8080-exec-2] INFO  c.s.crud.controller.UserController - User 'asik' registered successfully!
+2025-11-03 17:22:04.588 [http-nio-8080-exec-5] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-03 17:22:04.589 [http-nio-8080-exec-5] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-03 17:22:04.673 [http-nio-8080-exec-5] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-03 17:22:04.674 [http-nio-8080-exec-5] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-03 17:22:04.677 [http-nio-8080-exec-5] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-03 17:25:25.011 [http-nio-8080-exec-7] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Chaithravardhan Reddy
+2025-11-03 17:25:25.026 [http-nio-8080-exec-7] INFO  c.s.c.controller.StudentController - POST /students - Student created successfully with name: Chaithravardhan Reddy
+2025-11-03 17:25:45.107 [http-nio-8080-exec-10] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Priya Sharma
+2025-11-03 17:25:45.115 [http-nio-8080-exec-10] INFO  c.s.c.controller.StudentController - POST /students - Student created successfully with name: Priya Sharma
+2025-11-03 17:26:11.307 [http-nio-8080-exec-1] INFO  c.s.c.controller.StudentController - POST /students - Request to create student:  Rahul Verma
+2025-11-03 17:26:11.315 [http-nio-8080-exec-1] INFO  c.s.c.controller.StudentController - POST /students - Student created successfully with name: Rahul Verma
+2025-11-03 17:26:35.801 [http-nio-8080-exec-2] INFO  c.s.crud.controller.ResumeController - GET /resumes - Request received to fetch all resumes
+2025-11-03 17:26:35.806 [http-nio-8080-exec-2] INFO  c.s.crud.controller.ResumeController - GET /resumes - Returning 3 resumes
+2025-11-03 17:26:59.522 [http-nio-8080-exec-3] INFO  c.s.crud.controller.ResumeController - POST /resumes/1/add - Request to add resume for student ID 1
+2025-11-03 17:26:59.552 [http-nio-8080-exec-3] INFO  c.s.crud.controller.ResumeController - POST /resumes/1/add - Resume added successfully with title: Spring Boot Developer Resume
+2025-11-03 17:27:31.104 [http-nio-8080-exec-5] INFO  c.s.c.controller.StudentController - GET /students - Request received
+2025-11-03 17:27:31.113 [http-nio-8080-exec-5] INFO  c.s.c.controller.StudentController - GET /students - Returning 3 students
+2025-11-05 10:39:25.116 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-05 10:39:25.120 [http-nio-8080-exec-1] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-05 10:39:25.563 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-05 10:39:25.564 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-05 10:39:25.610 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-05 10:44:56.467 [http-nio-8080-exec-5] INFO  c.s.crud.controller.UserController - Received registration request for username: asik123
+2025-11-05 10:44:56.556 [http-nio-8080-exec-5] DEBUG c.s.crud.controller.UserController - Password encoded successfully for username: asik123
+2025-11-05 10:44:56.556 [http-nio-8080-exec-5] DEBUG c.s.crud.controller.UserController - Assigned default role 'ROLE_USER' to user: asik123
+2025-11-05 10:44:56.637 [http-nio-8080-exec-5] INFO  c.s.crud.controller.UserController - User 'asik123' registered successfully!
+2025-11-05 10:45:29.041 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik123
+2025-11-05 10:45:29.042 [http-nio-8080-exec-6] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik123
+2025-11-05 10:45:29.138 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - Authentication process started for user: asik123
+2025-11-05 10:45:29.138 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - User 'asik123' successfully authenticated.
+2025-11-05 10:45:29.143 [http-nio-8080-exec-6] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: asik123
+2025-11-05 10:45:36.099 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik123
+2025-11-05 10:45:36.099 [http-nio-8080-exec-7] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik123
+2025-11-05 10:45:36.199 [http-nio-8080-exec-7] ERROR c.s.crud.controller.AuthController - Unexpected error during login for 'asik123': Bad credentials
+2025-11-05 10:47:25.178 [http-nio-8080-exec-10] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik
+2025-11-05 10:47:25.178 [http-nio-8080-exec-10] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik
+2025-11-05 10:47:25.267 [http-nio-8080-exec-10] ERROR c.s.crud.controller.AuthController - Unexpected error during login for 'asik': Bad credentials
+2025-11-05 10:49:38.668 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik123
+2025-11-05 10:49:38.671 [http-nio-8080-exec-1] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik123
+2025-11-05 10:49:56.145 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - Authentication process started for user: asik123
+2025-11-05 10:49:56.146 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - User 'asik123' successfully authenticated.
+2025-11-05 10:49:57.073 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: asik123
+2025-11-05 10:50:01.730 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik12w3
+2025-11-05 10:50:01.730 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik12w3
+2025-11-05 10:51:03.951 [http-nio-8080-exec-3] ERROR c.s.crud.controller.AuthController - Unexpected error during login for 'asik12w3': Bad credentials
+2025-11-05 10:51:08.133 [http-nio-8080-exec-5] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik123
+2025-11-05 10:51:08.133 [http-nio-8080-exec-5] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik123
+2025-11-05 10:53:28.759 [http-nio-8080-exec-5] ERROR c.s.crud.controller.AuthController - Unexpected error during login for 'asik123': Bad credentials
+2025-11-05 10:53:38.834 [http-nio-8080-exec-8] INFO  c.s.crud.controller.AuthController - Login attempt received for username: asik123
+2025-11-05 10:53:38.834 [http-nio-8080-exec-8] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: asik123
+2025-11-05 10:53:41.578 [http-nio-8080-exec-8] INFO  c.s.crud.controller.AuthController - Authentication process started for user: asik123
+2025-11-05 10:53:41.578 [http-nio-8080-exec-8] INFO  c.s.crud.controller.AuthController - User 'asik123' successfully authenticated.
+2025-11-05 10:53:41.588 [http-nio-8080-exec-8] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: asik123
+2025-11-05 10:55:11.760 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-05 10:55:11.761 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-05 10:55:11.850 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-05 10:55:11.850 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-05 10:55:11.854 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-05 10:55:32.907 [http-nio-8080-exec-1] INFO  c.s.crud.controller.ResumeController - GET /resumes - Request received to fetch all resumes
+2025-11-05 10:55:32.947 [http-nio-8080-exec-1] INFO  c.s.crud.controller.ResumeController - GET /resumes - Returning 4 resumes
+2025-11-05 10:56:04.671 [http-nio-8080-exec-1] INFO  c.s.crud.controller.ResumeController - GET /resumes - Request received to fetch all resumes
+2025-11-05 10:56:04.702 [http-nio-8080-exec-1] INFO  c.s.crud.controller.ResumeController - GET /resumes - Returning 4 resumes
+2025-11-05 10:56:06.588 [http-nio-8080-exec-3] INFO  c.s.crud.controller.ResumeController - GET /resumes - Request received to fetch all resumes
+2025-11-05 10:56:06.594 [http-nio-8080-exec-3] INFO  c.s.crud.controller.ResumeController - GET /resumes - Returning 4 resumes
+2025-11-05 18:16:27.571 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-05 18:16:27.573 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-05 18:16:27.997 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-05 18:16:27.998 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-05 18:16:28.074 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-05 19:45:38.849 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-05 19:45:38.850 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-05 19:45:39.047 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-05 19:45:39.047 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-05 19:45:39.085 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-05 19:45:59.311 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-05 19:45:59.311 [http-nio-8080-exec-4] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-05 19:45:59.404 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-05 19:45:59.404 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-05 19:45:59.408 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-06 12:09:14.635 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-06 12:09:14.636 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-06 12:09:15.173 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-06 12:09:15.173 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-06 12:09:15.219 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-06 12:59:48.210 [http-nio-8080-exec-8] INFO  c.s.crud.controller.ResumeController - GET /resumes/7 - Request received
+2025-11-06 12:59:48.221 [http-nio-8080-exec-8] INFO  c.s.crud.controller.ResumeController - GET /resumes/7 - Resume retrieved successfully with title: ChaithuResume
+2025-11-06 13:01:19.741 [http-nio-8080-exec-2] INFO  c.s.crud.controller.ResumeController - GET /resumes/7 - Request received
+2025-11-06 13:01:19.779 [http-nio-8080-exec-2] INFO  c.s.crud.controller.ResumeController - GET /resumes/7 - Resume retrieved successfully with title: ChaithuResume
+2025-11-06 13:02:13.735 [http-nio-8080-exec-3] INFO  c.s.crud.controller.ResumeController - GET /resumes/7 - Request received
+2025-11-06 13:02:13.752 [http-nio-8080-exec-3] INFO  c.s.crud.controller.ResumeController - GET /resumes/7 - Resume retrieved successfully with title: ChaithuResume
+2025-11-06 13:23:48.074 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-06 13:23:48.075 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-06 13:23:48.442 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-06 13:23:48.442 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-06 13:23:48.469 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-06 15:13:42.938 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-06 15:13:42.939 [http-nio-8080-exec-7] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-06 15:13:43.460 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-06 15:13:43.461 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-06 15:13:43.487 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-06 15:29:18.572 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithu
+2025-11-06 15:29:18.572 [http-nio-8080-exec-2] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithu
+2025-11-06 15:29:18.736 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithu
+2025-11-06 15:29:18.736 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - User 'chaithu' successfully authenticated.
+2025-11-06 15:29:18.740 [http-nio-8080-exec-2] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithu
+2025-11-06 15:45:49.405 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-06 15:45:49.405 [http-nio-8080-exec-3] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-06 15:45:49.589 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-06 15:45:49.590 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-06 15:45:49.623 [http-nio-8080-exec-3] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-06 16:58:46.367 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-06 16:58:46.367 [http-nio-8080-exec-7] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-06 16:59:58.283 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-06 16:59:58.284 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-06 17:00:18.076 [http-nio-8080-exec-7] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-06 19:37:46.691 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-06 19:37:46.698 [http-nio-8080-exec-1] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-06 19:37:47.263 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-06 19:37:47.263 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-06 19:37:47.314 [http-nio-8080-exec-1] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
+2025-11-07 09:55:57.626 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - Login attempt received for username: chaithucheepati
+2025-11-07 09:55:57.628 [http-nio-8080-exec-4] DEBUG c.s.crud.controller.AuthController - Authentication token created for user: chaithucheepati
+2025-11-07 09:55:58.087 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - Authentication process started for user: chaithucheepati
+2025-11-07 09:55:58.094 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - User 'chaithucheepati' successfully authenticated.
+2025-11-07 09:55:58.148 [http-nio-8080-exec-4] INFO  c.s.crud.controller.AuthController - JWT token generated successfully for user: chaithucheepati
