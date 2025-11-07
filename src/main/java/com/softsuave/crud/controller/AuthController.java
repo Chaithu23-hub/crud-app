@@ -90,4 +90,6 @@ public class AuthController {
             throw new RuntimeException("Login failed due to internal error");
         }
     }
+
+
 }
